@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+	<named-config name="XMDome">
+  		<!-- 驱动类名 -->
+	    <property name="driverClass">com.mysql.jdbc.Driver</property>
+	    <!-- JDBCURL 连接数据库的url -->
+	    <property name="jdbcUrl">jdbc:mysql://localhost:3306/xmdome</property>
+	    <!-- 用户名 -->
+	    <property name="user">root</property>
+	    <!-- 密码 -->
+	    <property name="password">root</property>
+  		
+  		<!-- 当连接池不够用时，向数据库请求增加连接个数 -->
+		<property name="acquireIncrement">5</property>
+		<!-- 初始化连接的个数 -->
+		<property name="initialPoolSize">10</property>
+		<!-- 最少的连接个数 -->
+		<property name="minPoolSize">5</property>
+		<!-- 最大连接个数 -->
+		<property name="maxPoolSize">20</property>
+		<!-- 最大的Statements个数 -->
+		<property name="maxStatements">20</property> 
+		<!-- 每个连接中最多的statement个数 -->
+		<property name="maxStatementsPerConnection">5</property>
+
+	</named-config>
+</c3p0-config>
