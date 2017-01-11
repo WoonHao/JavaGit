@@ -8,94 +8,55 @@ package com.woon.zhijiepaixu;
 public class Sort {
 	public static void main(String[] args) {
 		Sort sort = new Sort();
-		sort.insertSort();//÷±Ω”≈≈–Ú
+		sort.insertSort();// ÷±Ω”≈≈–Ú
 		System.out.println();
 		double d = 5;
-		double ceil = Math.ceil(d/2);
+		double ceil = Math.ceil(d / 2);
 		System.out.println(ceil);
 	}
-	//≤Â»Î≈≈–Ú--÷±Ω”≈≈–Ú
-	public void insertSort(){
-		int a[] = {45,34,36,67,54,78,43,77};
+
+	// ≤Â»Î≈≈–Ú--÷±Ω”≈≈–Ú
+	public void insertSort() {
+		int a[] = { 45, 34, 36, 67, 54, 78, 43, 77 };
 		int temp = 0;
-		for(int i = 1;i<a.length;i++){
-			int j = i-1;
-			 temp = a[i];
-			for(;j>=0&&temp<a[j];j--){
-			a[j+1]=a[j];	
+		for (int i = 1; i < a.length; i++) {
+			int j = i - 1;
+			temp = a[i];
+			for (; j >= 0 && temp < a[j]; j--) {
+				a[j + 1] = a[j];
 			}
-			a[j+1]=temp;
+			a[j + 1] = temp;
 		}
-		for(int i=0;i<a.length;i++){
-			System.out.print(a[i]+"\t");
+		for (int i = 0; i < a.length; i++) {
+			System.out.print(a[i] + "\t");
 		}
 	}
-	//œ£∂˚≈≈–Ú
-	public void shellSort(){
-		int a[] = {1,54,6,3,78,34,12,45,56,100};
+
+	// œ£∂˚≈≈–Ú
+	public void shellSort() {
+		int a[] = { 1, 54, 6, 3, 78, 34, 12, 45, 56, 100 };
 		double d1 = a.length;
 		int temp = 0;
-		while(true){
-			d1 = Math.ceil(d1/2);
-			int d = (int)d1;
-			for(int x=0;x<d;x++){
-				
-				for(int i=x+d;i<a.length;i+=d){
-					int j= i-d;
+		while (true) {
+			d1 = Math.ceil(d1 / 2);
+			int d = (int) d1;
+			for (int x = 0; x < d; x++) {
+
+				for (int i = x + d; i < a.length; i += d) {
+					int j = i - d;
 					temp = a[i];
-					for(;j>=0&&temp<a[j];j--){
-						a[j+d] = a[j];
+					for (; j >= 0 && temp < a[j]; j--) {
+						a[j + d] = a[j];
 					}
-					a[j+d] = temp;
+					a[j + d] = temp;
 				}
 			}
-			if(d==1){
-				break ;
+			if (d == 1) {
+				break;
 			}
-			for(int i=0;i<a.length;i++){
-				System.out.print(a[i]+"\t");
+			for (int i = 0; i < a.length; i++) {
+				System.out.print(a[i] + "\t");
 			}
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 }
